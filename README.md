@@ -71,3 +71,22 @@ GitHub est une platforme d'hébergement de projets Git.
 - git remote add origin le_lien_du_repository_GitHub
 - git remote show origin ==> Confirmer en faisant "yes" si besoin 
 - git push -u origin main
+
+## Collaborer sur GitHub
+
+- Pour inviter qq d'autre il faut aller sur le Setting sur mon repository
+- Pour travailler sur le repository de qq d'autre, accepter l'invitation, ensuite assurer que je suis sur le bon dossier (faire le nécessaire sur le terminal)
+- Sur le repository partagé, cliquer sur "code" et copier l'url SSH
+- Faire git clone url_SSH
+
+### Pull
+
+- git pull ==> pour récupérer les travaux des autres
+
+### Push
+
+- Faire la modif
+- git add
+- git commit
+- git push 
+- Si jamais il y a un conflit et push rejeté, il faut faire un pull d'abord, choisir le stratégie (git config pull.rebase false, ctrl s + ctrl x), refaire un pull et ensuite push
