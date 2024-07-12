@@ -1,5 +1,13 @@
 # Mémo Git et GitHub
 
+## Git
+
+### Installation Git
+
+- Se mettre sur le terminal 
+- sudo apt install Git
+- git --version ==> Vérifier si il a bien été installé
+
 ## Différence entre Git et GitHub
 
 Git est un projet open source de gestion de versions de code.
