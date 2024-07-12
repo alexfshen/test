@@ -44,6 +44,16 @@ Git est un projet open source de gestion de versions de code.
 
 GitHub est une platforme d'hébergement de projets Git. 
 
+## Création du code SSH
+
+- Sur le terminal, faire : cd .ssh/ ==> Se mettre sur le bon dossier
+- ssh-keygen -t ed25519 -C "your_email@example.com" ==> Créer un code SSH
+- Faire "Entrée" plusieurs fois pour aller jusqu'au bout 
+- eval "$(ssh-agent -s)" ==> Assurer que l'agent est présent
+- ssh-add ~/.ssh/id_ed25519 ==> Ajouter le clé à l'agent
+- cat id_ed25519.pub ==> Visualiser le clé 
+- Pour ajouter ce clé sur GitHub, aller sur Settings 
+
 ## Workflow Git et GitHub de base 
 
 - Faire une modif en local
@@ -51,3 +61,13 @@ GitHub est une platforme d'hébergement de projets Git.
 - git commit -m "message de commit"
 - git push origin main ==> pousser les modifs locales vers GitHub
 
+## Aligner mon git local et mon repository GitHub
+
+- Il faut d'abord créer mon repository sur GitHub
+- Sur le terminal, se mettre sur le bon dossier
+- Initialiser git, ajouter mon fichier concerné (ce fichier on peut soit le créer à la main sur vs code soit faire echo) 
+- Faire le permier commit
+- git branch -M main ==> Renommer le master, obligatoire pour x raison
+- git remote add origin le_lien_du_repository_GitHub
+- git remote show origin ==> Confirmer en faisant "yes" si besoin 
+- git push -u origin main
